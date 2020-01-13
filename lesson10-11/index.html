@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueCli3.x 最新入门教程(lesson10-11)</title>
+    <!-- 引入vue   CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <h1>双向数据绑定 input/select/textarea </h1>
+        <!-- 键盘事件 -->
+        <label for="">姓名</label>
+        <!-- 双向数据绑定   input输入数据，span输出数据 -->
+        <!-- lazy懒加载，输入完，鼠标离开，会出发输出 -->
+        <input type="text" ref="name" @keyup="getName" />
+        <span>{{ name }}</span>
+        <br>
+        <label for="">Age </label>
+        <input type="text" ref="age" @keyup="getAge" />
+        <span>{{ age }}</span>
+        <br>
+
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

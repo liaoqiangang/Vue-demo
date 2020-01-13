@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>VueCli3.x 最新入门教程(lesson1-8)</title>
+  <!-- 生产环境版本，优化了尺寸和速度 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="vue-app">
+    <!-- vue  el data methods-->
+    <h1>vue el data methods</h1>
+    <p>Hello,{{ name }}</p>
+    <p>我的微信号：{{ wechat }}</p>
+    <p>{{ greet('morning') }}</p>
+    <p>{{ haveLunch() }}</p>
+
+    <!-- v-bind -->
+    <h1>v-bind,数据绑定</h1>
+    <p>
+      <a :href="website" target="_blank">百度</a>
+      <p><input type="text" :value="name" /></p>
+      <a v-bind:href="website" target="_blank">百度</a>
+    </p>
+    <!-- v-html -->
+    <p v-html="websiteTag"></p>
+
+    <h1>Envents,事件</h1>
+    <!-- v-on:click/@click  点击    @click.once 只能点击一次   v-on:dblclick/@dblclick  双击  -->
+    <button @click="age++">add a year</button>
+    <button v-on:click="age--">substract a year</button>
+    <p>我的年龄：{{ age }}</p>
+    <button @click.once="add(1)">add a year</button>
+    <button v-on:click="substract(1)">subtract a year</button>
+    <button @dblclick="add(10)">add 10 year</button>
+    <button v-on:dblclick="substract(10)">subtract 10 year</button>
+
+    <h1>mousemove事件</h1>
+    <!-- mousemove event  鼠标移动，不断更新坐标x，y-->
+    <div id="canvas" @mousemove="updateXY()">{{ x }} {{ y }}</div>
+    <p>
+      <!-- 阻止默认事件   点击只执行href跳转,阻止默认的handleClick方法-->
+      <a @click.prevent="handleClick()" href="http://www.baidu.com">baidu</a>
+    </p>
+    <!-- 键盘事件 -->
+    <label for="">姓名</label>
+    <!-- 绑定键盘回车键，执行logName方法 -->
+    <input type="text" @keyup.enter="logName" />
+    <label for="">Age </label>
+    <!-- 绑定组合键 alt+enter 执行logAge方法 -->
+    <input type="text" @keyup.alt.enter="logAge" />
+  </div>
+</body>
+<script src="app.js"></script>
+
+</html>
