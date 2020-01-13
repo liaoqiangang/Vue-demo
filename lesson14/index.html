@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VueCli3.x 最新入门教程(lesson12)</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- 引入vue   CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+
+  <body>
+    <div id="vue-app">
+      <h1>v-if 指令</h1>
+
+      <button @click="error=!error">toggle</button>
+      <button @click="success=!success">success</button>
+      <!-- v-if 不为真时  整个标签都没有 -->
+      <p v-if="error">error:如果条件为真，那么显现实</p>
+      <p v-else-if="success">success:如果条件为真，那么显现实</p>
+      <p v-else>other</p>
+      <!--  v-show  只是显示隐藏，标签一直都有 -->
+      <p v-show="success">v-show</p>
+
+      <h1>v-for</h1>
+      <h2>charactors ....</h2>
+      <ul>
+        <li v-for="(mrCharactor,mri) in characters">
+          {{mri+1}}.{{ mrCharactor }}
+        </li>
+      </ul>
+      <h2>users .....</h2>
+      <ul>
+        <li v-for="user in users">
+          {}
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
