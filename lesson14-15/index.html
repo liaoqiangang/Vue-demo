@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>VueCli3.x 最新入门教程(lesson12)</title>
+    <title>VueCli3.x 最新入门教程(lesson14-15)</title>
     <link rel="stylesheet" href="style.css" />
     <!-- 引入vue   CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -32,10 +32,21 @@
       </ul>
       <h2>users .....</h2>
       <ul>
-        <li v-for="user in users">
-          {}
+        <li v-for="(user,i) in users">
+          {{ i }}. 姓名：{{user.name}} 年龄：{{user.age}}
         </li>
       </ul>
+      <!-- template 可以当一个容器，但是不会在页面渲染 -->
+      <template v-for="(user,index) in users">
+        <h3>{{ index }}-{{ user.name}}</h3>
+        <p>age-{{ user.age }}</p>
+      </template>
+
+      <template v-for="(user,index) in users">
+        <div v-for="(val,key) in user">
+          <h3>{{ key }}-{{val}}</h3>
+        </div>
+      </template>
     </div>
   </body>
   <script src="app.js"></script>
