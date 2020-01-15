@@ -5,20 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>VueCli3.x 最新入门教程(lesson17)</title>
+  <title>VueCli3.x 最新入门教程(lesson18)</title>
   <!-- 引入vue   CDN -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
-  <h1>多个Vue</h1>
+  <h1>全局组件，和全局变量</h1>
   <div id="vue-app-one">
     <h2>{{ title }}</h2>
+    <!-- <Greeting/> -->
+    <Greeting />
+
   </div>
   <div id="vue-app-two">
     <h2>{{ title }} </h2>
-    <p>{{greet}}</p>
-    <button @click="changgeOneTitle">change app one title</button>
+    <!-- <Greeting></Greeting> -->
+    <Greeting></Greeting>
   </div>
 </body>
 <script src="app.js"></script>

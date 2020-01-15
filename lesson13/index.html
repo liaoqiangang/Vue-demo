@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>VueCli3.x 最新入门教程(13)</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- 引入vue   CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  </head>
 
-  <body>
-    <div id="vue-app">
-      <h1>动态绑定样式 两种方式</h1>
-      <!--  点击取反  v-bind:class="class:boolean"   :class="class:boolean" -->
-      <!-- <h2>实例1 属性绑定</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>VueCli3.x 最新入门教程(13)</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- 引入vue    -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    <h1>动态绑定样式 两种方式</h1>
+    <!--  点击取反  v-bind:class="class:boolean"   :class="class:boolean" -->
+    <!-- <h2>实例1 属性绑定</h2>
       <div
         @click="mrChangeColor=!mrChangeColor"
         :class="{changeColor:mrChangeColor}"
@@ -22,15 +23,16 @@
         <span>Hello</span>
       </div> -->
 
-      <!--  点击取反  v-bind:class="class:boolean"   :class="class:boolean" -->
+    <!--  点击取反  v-bind:class="class:boolean"   :class="class:boolean" -->
 
-      <h2>实例1 属性绑定</h2>
-      <button @click="mrChangeColor=!mrChangeColor">changeColor</button>
-      <button @click="mrChangeLength=!mrChangeLength">changeLength</button>
-      <div :class="comClass">
-        <span>Hello</span>
-      </div>
+    <h2>实例1 属性绑定</h2>
+    <button @click="mrChangeColor=!mrChangeColor">changeColor</button>
+    <button @click="mrChangeLength=!mrChangeLength">changeLength</button>
+    <div :class="comClass">
+      <span>Hello</span>
     </div>
-  </body>
-  <script src="app.js"></script>
+  </div>
+</body>
+<script src="app.js"></script>
+
 </html>

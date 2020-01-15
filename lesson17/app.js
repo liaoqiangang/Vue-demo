@@ -12,6 +12,16 @@ const two = new Vue({
   data: {
     title: "this is app two"
   },
-  methods: {},
-  computed: {}
+  methods: {
+    changgeOneTitle() {
+      one.title = "this is app one changed!";
+    }
+  },
+  computed: {
+    greet() {
+      return "Hello liaoqiangang";
+    }
+  }
 });
+
+two.title = "this is app two changed!";
